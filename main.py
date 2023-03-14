@@ -12,18 +12,20 @@ for ha_word in words:
 
 
 print('\n 3. question')
+a=''
 
-n= int(input('Enter a number between 3 and 9, please:'))
-for i in range (1, n+1):
-    for j in range(i):
-        print('*', end='')
-    print()
-for i in range (n-1,0,-1):
-    for j in range (i):
-        print ('*', end='')
-    print()
+n = int(input('Enter a number between 3 and 9, please:'))
+if (2<n<10):
+    for i in range(n):
+        a+='*'
+        print(a)
+
+    for i in range(n):
+        a=a.replace('*','',1 )
+        print(a)
 
 
-
+else:
+    print("invalid")
 
 
